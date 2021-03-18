@@ -10,7 +10,7 @@
    width: 10px;
 }
 .main__table::-webkit-scrollbar-thumb {
-   background-color: #7caaff;
+   background-color: #c4cbd8;
    border-radius: 10px;
    margin: 5px;
 }

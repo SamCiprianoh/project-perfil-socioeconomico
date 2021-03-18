@@ -1,0 +1,32 @@
+
+.table {
+   background-color: rgb(211, 227, 255);
+   border-collapse: collapse;
+   width: 100%;
+   border-radius: .5rem .5rem 0 0;
+   overflow: hidden;
+   white-space: nowrap;
+}
+
+.table__head-tr {
+   background-color: rgb(128, 165, 233);
+   color: #eee;
+   text-align: left;
+}
+
+.table__title,
+.table__item{
+   padding: .938rem;
+}
+
+.table__row {
+   border-bottom: .063rem solid rgb(243, 246, 250);
+}
+
+.table__row:nth-last-of-type(even) {
+   background-color: rgb(228, 237, 255);
+}
+
+.table__row:last-of-type {
+   border-bottom: .125rem solid rgb(128, 165, 233);
+}

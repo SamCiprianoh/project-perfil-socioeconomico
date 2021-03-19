@@ -1,0 +1,74 @@
+/*========== CARDS ===========*/
+.main__cards{
+   display: flex;
+   margin-top: var(--container);
+}
+
+.main__parcitipantes{
+   display: flex;
+   background-color: var(--Cornflowerblue);
+   color: var(--White);
+   width: 18.75rem;
+   padding: 1.25rem;
+   border-radius: .625rem;
+   box-shadow: 1px 1px 2px rgba(15, 45, 90, 0.1);
+}
+
+.main__participantes-dados{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.main__alunos{
+   font-size: 1.5rem;
+   color: var(--gray-light);
+   font-weight: bold;
+}
+
+.main__alunos-qt{
+   font-size: 2.5rem;
+   font-weight: bold;
+}
+
+.main__participaram{
+   font-size: 1.125rem;
+   font-weight: bold;
+   color: var(--gray-light);
+   margin-top: .938rem;
+}
+
+.main__participaram-qt{
+   font-size: 1.875rem;
+   font-weight: bold;
+}
+
+.main__participantes-icon{
+   width: 100%;
+   text-align: center;
+   font-size: 3rem;
+   align-self: center;
+   color: var(--Cornflowerblue-light);
+}
+
+/*Chart Curso e Periodo*/
+.main__container-charts{
+   display: flex;
+   width: 100%;
+   max-height: 15.625rem;
+}
+.main__charts{
+   margin-left: 1.875rem;
+   background-color: var(--White);
+   padding: 1.25rem;
+   border-radius: .625rem;
+   flex: 1;
+}
+
+.main__canvas{
+   max-width: 25rem;
+   max-height: 15.625rem;
+   margin: 0 auto;
+}
+
+/*Tabela Email e RA*/

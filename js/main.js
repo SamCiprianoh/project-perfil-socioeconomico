@@ -1,4 +1,3 @@
-
 /*========== MENU DROPDOWN ===========*/
 const elementsDoc = document.querySelectorAll('.nav__link-drop')
 const elementsDrop = document.getElementsByClassName('nav__dropdown-content')

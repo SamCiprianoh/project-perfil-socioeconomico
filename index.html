@@ -4,10 +4,11 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Perfil Socioeconômico</title>
    <link rel="stylesheet" href="css/all.css">
-   <title>Home</title>
 </head>
 <body>
+   
    <!--================ HEADER ================-->
    <header class="header">
       <div class="header__container">
@@ -24,8 +25,8 @@
       </div>
    </header>
 
-   <!--========== NAV ==========-->
-   <div class="nav nav--hiden">
+    <!--========== NAV ==========-->
+    <div class="nav nav--hiden">
       <nav class="nav__container">
          <a href="index.html" class="nav__logo-link">
             <i class="fas fa-chart-bar"></i>
@@ -70,21 +71,26 @@
    </div>
 
    <!--================ MAIN ================-->
-   <main class="main main--move">
+   <div class="container">
+      
+      <!--Titulo e Botão de Upload-->
+      <main class="main main--move">
       <div class="main__painel">
          <div class="main__container-title">
             <h1 class="main__title">Painel</h1>
-            <span class="main__att">Atualizado em 18/03/2021</span>
+            <span class="main__data">Atualizado em 18/03/2021</span>
          </div>
+
          <div class="main__btn">
             <i class="fas fa-download main__icon"></i>
             Arquivo XLSX
          </div>
       </div>
-      
-      <div class="main__painel-boxs">
-         <div class="main__participantes">
-            <div class="main__participantes-container">
+
+      <!--Cards Alunos e Participantes-->
+      <div class="main__cards">
+         <div class="main__parcitipantes">
+            <div class="main__participantes-dados">
                <span class="main__alunos">Alunos</span>
                <span class="main__alunos-qt">73</span>
                <span class="main__participaram">Participaram</span>
@@ -94,17 +100,21 @@
             <div class="main__participantes-icon">
                <i class="fas fa-users"></i>
             </div>
-         </div>   
+         </div>
 
-         <div class="main__participantes2">
-            <canvas id="myChart" width="500" height="130"></canvas>
-         </div> 
+         <!--Charts Curso e Periodo-->
+         <div class="main__container-charts">
+            <div class="main__charts">
+               <canvas id="chartCurso" class="main__canvas"></canvas>
+            </div>
 
-         <div class="main__participantes3">
-            <canvas id="myChart2" width="500" height="130"></canvas>
-         </div> 
+            <div class="main__charts">
+               <canvas id="chartPeriodo" class="main__canvas"></canvas>
+            </div>
+         </div>
       </div>
 
+      <!--Tabela emails e RAs-->
       <div class="main__table">
          <table class="table">
             <thead id="thead"></thead>
@@ -112,37 +122,21 @@
          </table>
       </div>
 
-      
-      <h2 class="main__subtitle">Educação</h2>
-      
-      <div class="main__educacao-container">
-         <div class="main__educacao"></div>
-         <div class="main__educacao1"></div>
-         <div class="main__educacao2"></div>
-      </div>
+         
 
-      <div class="main__educacao-container">
-         <div class="main__educacao"></div>
-         <div class="main__educacao1"></div>
-         <div class="main__educacao2"></div>
-      </div>
+      </main>
+   </div>
 
-      <h2 class="main__subtitle">Moradia</h2>
-      
-      <div class="main__educacao-container">
-         <div class="main__educacao"></div>
-         <div class="main__educacao1"></div>
-         <div class="main__educacao2"></div>
-      </div>
 
-      <div class="main__educacao-container">
-         <div class="main__educacao"></div>
-         <div class="main__educacao1"></div>
-      </div>
-      
-   </main>
 
-   <!--================ JS ================-->
+
+
+
+
+
+
+
+
    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
    <script src="https://kit.fontawesome.com/f4dad96733.js" crossorigin="anonymous"></script>
    <script src="js/chart.js"></script>

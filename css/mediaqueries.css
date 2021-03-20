@@ -32,6 +32,7 @@
 
    .main__charts{
       margin: 1.875rem 0 0 0;
+      padding: .625rem;
    }
 }
 
@@ -79,6 +80,10 @@
    justify-content: center;
    }
 
+   .main__charts{
+      padding: .625rem;
+   }
+
    .main__participaram{
       margin-left: 0;
    }
@@ -88,6 +93,7 @@
 @media screen and (max-width: 375px){
    .main__charts{
       width: 100%;
+      padding: .315rem;
    }
 }
 
@@ -106,5 +112,9 @@
 
    .nav__logo-name{
       font-size: .875rem;
+   }
+
+   .main__charts{
+      padding: 0;
    }
 }

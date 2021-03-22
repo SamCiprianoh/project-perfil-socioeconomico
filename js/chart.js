@@ -199,10 +199,6 @@ async function generateChart() {
 
     console.log(respostas[1])
 
-
-
-
-
     //Pega as respostas da questao 1
     let curso
 
@@ -216,7 +212,6 @@ async function generateChart() {
 
     dadosCurso = geraMatriz(dadosCurso, optCurso)
 
-    
     for(j = 0; j < 2; j++){
         for(k = 0; k < optCurso.length; k++){
             if(curso[j][k].length >= 0){
@@ -235,7 +230,6 @@ async function generateChart() {
     
     chartTwoLabels('chartCurso', 'bar', labelsCurso, dadosCurso, dadosCurso, questoes[2])
 
-    
     //Pega as dados da questao 2
     let dadosPeriodo = []
     let labelsPeriodo = []

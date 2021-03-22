@@ -1,5 +1,5 @@
 /*========== MENU DROPDOWN ===========*/
-const elementsDoc = document.querySelectorAll('.nav__link-drop')
+/*const elementsDoc = document.querySelectorAll('.nav__link-drop')
 const elementsDrop = document.getElementsByClassName('nav__dropdown-content')
 const dropIcon = document.getElementsByClassName('nav__icon-drop')
 
@@ -10,7 +10,7 @@ elementsDoc.forEach(item =>{
       elementsDrop[j].classList.toggle('nav__dropdown-hide')
       dropIcon[j].classList.toggle('nav__dropdown-rotate')
   });
-});
+});*/
 
 
 

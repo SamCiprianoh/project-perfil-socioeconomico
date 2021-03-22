@@ -23,7 +23,7 @@
 }
 
 .main__alunos{
-   font-size: 1.5rem;
+   font-size: 1.875rem;
    color: var(--gray-light);
    font-weight: bold;
 }
@@ -55,9 +55,8 @@
 .main__charts{
    margin-left: 1.875rem;
    background-color: var(--White);
-   padding: 1.25rem;
+   padding: 1.125rem;
    border-radius: .625rem;
    flex: 2;
    position: relative;
 }
-

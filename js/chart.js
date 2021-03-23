@@ -1,6 +1,6 @@
 //LÊ O ARQUIVO JSOM
 async function generateChart() {
-    const file = await fetch('js/forms.json')
+    const file = await fetch('json/forms.json')
  
     const json = await file.json()
     const forms = json.forms
@@ -13,7 +13,7 @@ async function generateChart() {
         questoes = Object.getOwnPropertyNames(quest)
         i++
     }
-    
+
     //Filtra so as questoes do noturno
     let noturno = forms.filter(function(periodo){
         return periodo[questoes[3]] === 'Noturno'
@@ -217,17 +217,27 @@ async function generateChart() {
             if(curso[j][k].length >= 0){
                 dadosCurso[j][k].push(curso[j][k].length)
             }
-        }
-            
+        }   
     }
 
     //Mostra o label de acordo com os dados (!!TERMINAR!!)
     let labelsCurso = []
 
-    if(dadosCurso[0][0] > 0){
+    if(dadosCurso[0][0] > 0 || dadosCurso[1][0] > 0){
         labelsCurso.push('ADS')
     }
-    
+    if(dadosCurso[0][1] > 0 || dadosCurso[1][1] > 0){
+        labelsCurso.push('GPI')
+    }
+    if(dadosCurso[0][2] > 0 || dadosCurso[1][2] > 0){
+        labelsCurso.push('GRH')
+    }
+    if(dadosCurso[0][3] > 0 || dadosCurso[1][3] > 0){
+        labelsCurso.push('DSM')
+    }
+
+    console.log(dadosCurso)
+
     chartTwoLabels('chartCurso', 'bar', labelsCurso, dadosCurso, dadosCurso, questoes[2])
 
     //Pega as dados da questao 2
@@ -247,7 +257,7 @@ async function generateChart() {
         }
     }
 
-    chartOneLabel('chartPeriodo', 'bar', labelsPeriodo, dadosPeriodo, questoes[3])
+    chartOneLabel('chartPeriodo', 'pie', labelsPeriodo, dadosPeriodo, questoes[3])
 
 }
 

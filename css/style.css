@@ -83,6 +83,7 @@ a{
    left: 0;
    max-width: 100%;
    transition: .4s ease-in-out;
+   z-index: 1;
 }
 
 .nav__container{

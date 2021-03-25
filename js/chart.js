@@ -112,15 +112,59 @@ async function generateChart() {
                     label: 'Matutino',
                     data: dados1,
                     backgroundColor: [
-                        'rgb(91, 228, 247)',
-                        'rgb(91, 228, 247)',
+                        'rgba(91, 228, 247, .8)',
+                        'rgba(91, 228, 247, .8)',
+                        'rgba(91, 228, 247, .8)',
+                        'rgba(91, 228, 247, .8)',
+                        'rgba(91, 228, 247, .8)',
+                        'rgba(91, 228, 247, .8)',
+                        'rgba(91, 228, 247, .8)',
+                        'rgba(91, 228, 247, .8)',
+                        'rgba(91, 228, 247, .8)',
+                        'rgba(91, 228, 247, .8)',
+                        'rgba(91, 228, 247, .8)',
+                        'rgba(91, 228, 247, .8)',
+                        'rgba(91, 228, 247, .8)',
+                        'rgba(91, 228, 247, .8)',
+                        'rgba(91, 228, 247, .8)',
+                        'rgba(91, 228, 247, .8)',
+                        'rgba(91, 228, 247, .8)',
+                        'rgba(91, 228, 247, .8)',
+                        'rgba(91, 228, 247, .8)',
+                        'rgba(91, 228, 247, .8)',
+                        'rgba(91, 228, 247, .8)',
+                        'rgba(91, 228, 247, .8)',
+                        'rgba(91, 228, 247, .8)',
+                        'rgba(91, 228, 247, .8)',
                     ],
                 },{
                     label: 'Noturno',
                     data: dados2,
                     backgroundColor: [
-                        'rgb(255, 110, 170)',
-                        'rgb(255, 110, 170)',
+                        'rgba(255, 110, 170, .8)',
+                        'rgba(255, 110, 170, .8)',
+                        'rgba(255, 110, 170, .8)',
+                        'rgba(255, 110, 170, .8)',
+                        'rgba(255, 110, 170, .8)',
+                        'rgba(255, 110, 170, .8)',
+                        'rgba(255, 110, 170, .8)',
+                        'rgba(255, 110, 170, .8)',
+                        'rgba(255, 110, 170, .8)',
+                        'rgba(255, 110, 170, .8)',
+                        'rgba(255, 110, 170, .8)',
+                        'rgba(255, 110, 170, .8)',
+                        'rgba(255, 110, 170, .8)',
+                        'rgba(255, 110, 170, .8)',
+                        'rgba(255, 110, 170, .8)',
+                        'rgba(255, 110, 170, .8)',
+                        'rgba(255, 110, 170, .8)',
+                        'rgba(255, 110, 170, .8)',
+                        'rgba(255, 110, 170, .8)',
+                        'rgba(255, 110, 170, .8)',
+                        'rgba(255, 110, 170, .8)',
+                        'rgba(255, 110, 170, .8)',
+                        'rgba(255, 110, 170, .8)',
+                        'rgba(255, 110, 170, .8)',
                     ],
                 }]
             },
@@ -154,8 +198,8 @@ async function generateChart() {
                     label: label,
                     data: dados,
                     backgroundColor: [
-                        'rgb(91, 228, 247)',
-                        'rgb(255, 110, 170)',
+                        'rgba(91, 228, 247, .8)',
+                        'rgba(255, 110, 170, .8)',
                     ],
                 }]
             },
@@ -191,6 +235,7 @@ async function generateChart() {
         return variavel
     }
 
+    
 
     //Funcao completa que gera os graficos
     function geraChart(variavel, opcao, numQuestao, dadosM, dadosN, labels, classe, tipo){
@@ -235,20 +280,21 @@ async function generateChart() {
            
         }
 
-        for(j = 0; j < 1; j++){
+        for(j = 0; j <= 1; j++){
             for(k = 0; k < opcao.length; k++){
                 if(variavel[j][k][0] != undefined){
                     labels.push(variavel[j][k][0])
                 }
+                labels = labels.filter(function(este, i) {
+                    return labels.indexOf(este) === i;
+                });
             }
         }
 
-
-        console.log(variavel[0])
-
         chartTwoLabels(classe, tipo, labels, dadosM, dadosN, numQuestao)
     }
-   
+
+
     //Chart Curso
     let curso
     let dadosCursoM = []
@@ -313,22 +359,88 @@ async function generateChart() {
 
     geraChart(estado, optEstado, 5, dadosEstadoM, dadosEstadoN, labelsEstado, 'chartEstado', 'bar')
 
-     //Chart Cidade
-     let cidade 
-     let dadosCidadeM = []
-     let dadosCidadeN = []
-     let labelsCidade = []
- 
-     geraChart(cidade, optCidade, 6, dadosCidadeM, dadosCidadeN, labelsCidade, 'chartCidade', 'doughnut')
+    //Chart Cidade
+    let cidade 
+    let dadosCidadeM = []
+    let dadosCidadeN = []
+    let labelsCidade = []
+
+    geraChart(cidade, optCidade, 6, dadosCidadeM, dadosCidadeN, labelsCidade, 'chartCidade', 'horizontalBar')
+
+    //Chart Mora com quem
+    let moraCom 
+    let dadosMoraComM = []
+    let dadosMoraComN = []
+    let labelsMoraCom = []
+
+    geraChart(moraCom, optMoraCom, 13, dadosMoraComM, dadosMoraComN, labelsMoraCom, 'chartMoraCom', 'horizontalBar')
 
 
+    //Chart Mora com quem
+    let TempoMoradia 
+    let dadosTempoMoradiaM = []
+    let dadosTempoMoradiaN = []
+    let labelsTempoMoradia = []
 
-    //console.log(respostas[6])
-    //console.log(curso)
-    //console.log(dadosCidadeM)
-    //console.log(dadosCidadeN)
-    //console.log(labelsCidade)
+    geraChart(TempoMoradia, optTempoMoradia, 16, dadosTempoMoradiaM, dadosTempoMoradiaN, labelsTempoMoradia, 'chartTempoMoradia', 'bar')
+
+    //Chart Mora com quem
+    let QtdMoradores 
+    let dadosQtdMoradoresM = []
+    let dadosQtdMoradoresN = []
+    let labelsQtdMoradores = []
+
+    geraChart(QtdMoradores, optQtdMoradores, 14, dadosQtdMoradoresM, dadosQtdMoradoresN, labelsQtdMoradores, 'chartQtdMoradores', 'bar')
+
+    //Chart Mora com quem
+    let SituacaoDomi 
+    let dadosSituacaoDomiM = []
+    let dadosSituacaoDomiN = []
+    let labelsSituacaoDomi = []
+
+    geraChart(SituacaoDomi, optSituacaoDomi, 15, dadosSituacaoDomiM, dadosSituacaoDomiN, labelsSituacaoDomi, 'chartSituacaoDomi', 'bar')
+
+    //Chart Mora com quem
+    let Genero 
+    let dadosGeneroM = []
+    let dadosGeneroN = []
+    let labelsGenero = []
+
+    geraChart(Genero, optGenero, 7, dadosGeneroM, dadosGeneroN, labelsGenero, 'chartGenero', 'bar')
+
+
+    //Chart Mora com quem
+    let EstadoCivil 
+    let dadosEstadoCivilM = []
+    let dadosEstadoCivilN = []
+    let labelsEstadoCivil = []
+
+    geraChart(EstadoCivil, optEstadoCivil, 9, dadosEstadoCivilM, dadosEstadoCivilN, labelsEstadoCivil, 'chartEstadoCivil', 'horizontalBar')
+
+    //Chart Mora com quem
+    let Portador 
+    let dadosPortadorM = []
+    let dadosPortadorN = []
+    let labelsPortador = []
+
+    geraChart(Portador, optPortador, 11, dadosPortadorM, dadosPortadorN, labelsPortador, 'chartPortador', 'bar')
+
+    //Chart Mora com quem
+    let QtdFilhos 
+    let dadosQtdFilhosM = []
+    let dadosQtdFilhosN = []
+    let labelsQtdFilhos = []
+
+    geraChart(QtdFilhos, optQtdFilhos, 12, dadosQtdFilhosM, dadosQtdFilhosN, labelsQtdFilhos, 'chartQtdFilhos', 'bar')
+
     
+
+    
+
+     
+    
+    console.log(respostas)
+     
 }
 
 generateChart()

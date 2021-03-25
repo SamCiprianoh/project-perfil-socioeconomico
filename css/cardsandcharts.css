@@ -53,6 +53,7 @@
 
 /*Chart Curso e Periodo*/
 .main__charts{
+   flex-wrap: wrap;
    margin-left: 1.875rem;
    background-color: var(--White);
    padding: 1.125rem;
@@ -62,12 +63,9 @@
 }
 
 .main__moradia{
-   margin: 3.75rem auto;
-   padding: .313rem;
-   border-top: 4px solid #2E446E;
-   border-bottom: 4px solid #2E446E;
-   width: 12%;
-   text-align: center;
+   margin-top: 3.75rem;
+   padding-left: 1rem;
+   border-left: 4px solid var(--Cornflowerblue-darker);
 }
 
 .main__subtitle{
@@ -87,4 +85,32 @@
    margin-right: 1.875rem;
 }
 
+.main__charts-MoraCom{
+   background-color: var(--White);
+   padding: 1.125rem;
+   border-radius: .625rem;
+   flex: 2;
+   position: relative;
+}
 
+.main__charts-MoraCom:first-child{
+   margin-right: 1.875rem;
+}
+
+.main__dadosPessoais{
+   margin-top: 3.75rem;
+   padding-left: 1rem;
+   border-left: 4px solid var(--Cornflowerblue-darker);
+}
+
+.main__charts-dadosPessoais{
+   background-color: var(--White);
+   padding: 1.125rem;
+   border-radius: .625rem;
+   flex: 2;
+   position: relative;
+}
+
+.main__charts-dadosPessoais:first-child{
+   margin-right: 1.875rem;
+}

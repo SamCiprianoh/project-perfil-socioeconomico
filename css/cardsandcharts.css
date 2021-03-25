@@ -60,3 +60,31 @@
    flex: 2;
    position: relative;
 }
+
+.main__moradia{
+   margin: 3.75rem auto;
+   padding: .313rem;
+   border-top: 4px solid #2E446E;
+   border-bottom: 4px solid #2E446E;
+   width: 12%;
+   text-align: center;
+}
+
+.main__subtitle{
+   font-size: 1.875rem;
+   color: #2E446E;
+}
+
+.main__charts-moradia{
+   background-color: var(--White);
+   padding: 1.125rem;
+   border-radius: .625rem;
+   flex: 2;
+   position: relative;
+}
+
+.main__charts-moradia:first-child{
+   margin-right: 1.875rem;
+}
+
+

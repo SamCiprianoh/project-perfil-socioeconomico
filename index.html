@@ -75,51 +75,67 @@
       
       <!--Titulo e Botão de Upload-->
       <main class="main main--move">
-      <div class="main__painel">
-         <div class="main__container-title">
-            <h1 class="main__title">Painel</h1>
-            <span class="main__data">Atualizado em 18/03/2021</span>
-         </div>
-
-         <div class="main__btn">
-            <i class="fas fa-download main__icon"></i>
-            Arquivo XLSX
-         </div>
-      </div>
-
-      <!--Cards Alunos e Participantes-->
-      <div class="main__cards">
-         <div class="main__participantes">
-            <div class="main__participantes-dados">
-               <span class="main__alunos">Alunos</span>
-               <span class="main__alunos-qt">79</span>
-               <span class="main__participaram">Participaram</span>
-               <span class="main__participaram-qt">66</span>
+         <div class="main__painel">
+            <div class="main__container-title">
+               <h1 class="main__title">Painel</h1>
+               <span class="main__data">Atualizado em 18/03/2021</span>
             </div>
 
-            <div class="main__participantes-icon">
-               <i class="fas fa-users"></i>
+            <div class="main__btn">
+               <i class="fas fa-download main__icon"></i>
+               Arquivo XLSX
             </div>
          </div>
 
-         <!--Charts Curso e Periodo-->
-         <div class="main__charts">
-            <canvas id="chartCurso" class="main__canvas"></canvas>
+         <!--Cards Alunos e Participantes-->
+         <div class="main__cards">
+            <div class="main__participantes">
+               <div class="main__participantes-dados">
+                  <span class="main__alunos">Alunos</span>
+                  <span class="main__alunos-qt">79</span>
+                  <span class="main__participaram">Participaram</span>
+                  <span class="main__participaram-qt">66</span>
+               </div>
+
+               <div class="main__participantes-icon">
+                  <i class="fas fa-users"></i>
+               </div>
+            </div>
+
+            <!--Charts Curso e Periodo-->
+            <div class="main__charts">
+               <canvas id="chartCurso" class="main__canvas"></canvas>
+            </div>
+
+            <div class="main__charts">
+               <canvas id="chartPeriodo" class="main__canvas"></canvas>
+            </div>
+            
          </div>
 
-         <div class="main__charts">
-            <canvas id="chartPeriodo" class="main__canvas"></canvas>
+         <!--Tabela emails e RAs-->
+         <div class="main__table">
+            <table class="table">
+               <thead id="thead"></thead>
+               <tbody id="tbody"></tbody>
+            </table>
          </div>
-         
-      </div>
 
-      <!--Tabela emails e RAs-->
-      <div class="main__table">
-         <table class="table">
-            <thead id="thead"></thead>
-            <tbody id="tbody"></tbody>
-         </table>
-      </div>
+
+         <div class="main__moradia">
+            <h2 class="main__subtitle">Moradia</h2>
+         </div>
+
+         <div class="main__cards">
+            <div class="main__charts-moradia">
+               <canvas id="chartEstado" class="main__canvas"></canvas>
+            </div>
+
+            <div class="main__charts-moradia">
+               <canvas id="chartCidade" class="main__canvas"></canvas>
+            </div>
+            
+         </div>
 
       </main>
    </div>
